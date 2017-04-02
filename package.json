@@ -1,0 +1,29 @@
+{
+  "name": "auto-textarea",
+  "version": "1.0.0",
+  "description": "基于Vue的自适应高度的文本输入框",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinesboy/auto-textarea.git"
+  },
+  "keywords": [
+    "vue",
+    "textarea",
+    "javascript",
+    "auto"
+  ],
+  "author": "hinesboy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hinesboy/auto-textarea/issues"
+  },
+  "homepage": "https://github.com/hinesboy/auto-textarea#readme",
+  "devDependencies": {
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0"
+  }
+}
