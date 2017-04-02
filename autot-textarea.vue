@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}}</pre>
-    <textarea :style="{fontSize: fontSize , lineHeight: lineHeight}" @change="change(temp_value)" v-model="temp_value" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea :placeholder="placeholder" :style="{fontSize: fontSize , lineHeight: lineHeight}" @change="change(temp_value)" v-model="temp_value" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
@@ -19,6 +19,10 @@
         value: {
           type: String,
           default: ''
+        },
+        placeholder: {
+            type: String,
+            default: ''
         },
         border: {
           type: Boolean,
