@@ -63,7 +63,7 @@ $ npm install autoTextarea --save
 
 ## analyse (原理剖析)
 
-```
+``` html
     // html
     <div>
         <pre><br>{{value}}</pre>
@@ -72,6 +72,7 @@ $ npm install autoTextarea --save
 ```
 
 ``` stylus
+    // css
     div
       position absolute
       pre
