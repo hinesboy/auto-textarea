@@ -1,4 +1,4 @@
-# divarea
+# auto-textarea
 
 > 基于Vue的高度自适应文本输入框
 
@@ -6,19 +6,19 @@
 
 loadding...
 
-## Use Setup
+## Use Setup (开始)
 
-### Install divarea
+### Install auto-textarea (安装)
 
 ```
 $ npm install autoTextarea --save
 ```
-### install dependencies
+### install dependencies  (安装依赖)
 
 ```
 $ npm install
 ```
-### Use
+### Use (如何使用)
 
 ```
     // import with ES6
@@ -46,13 +46,13 @@ $ npm install
 
 ## API
 
-## Dependencies
+## Dependencies (依赖)
 
 [stylus](https://github.com/stylus/stylus)
 
 [stylus-loader](https://github.com/shama/stylus-loader)
 
-## Licence
+## Licence (证书)
 
 autoTextarea is open source and released under the MIT Licence.
 

@@ -8,12 +8,12 @@
  * @author hinesboy
  */
 
-const autoTextarea = require('./autoTextarea.vue');
+const autoTextarea = require('./auto-textarea.vue');
 
 const VueAutoTextarea = {
     autoTextarea: autoTextarea,
     install: function(Vue) {
-        Vue.component('autoTextarea', autoTextarea);
+        Vue.component('auto-textarea', autoTextarea);
     },
 };
 
