@@ -74,7 +74,7 @@ $ npm install autoTextarea --save
 ``` stylus
     // css
     div
-      position absolute
+      position relative
       pre
         display block
         visibility hidden
