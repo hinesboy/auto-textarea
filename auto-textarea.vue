@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}}</pre>
-    <textarea :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" @change="change(temp_value)" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea spellcheck="false" :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" @keyup="$keyup" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
@@ -48,6 +48,11 @@
             }
         },
         methods: {
+            $keyup($event) {
+                if (this.change) {
+                    this.change(this.temp_value , $event)
+                }
+            }
         },
         watch: {
             value: function (val, oldVal) {
@@ -57,7 +62,6 @@
     };
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-
   .auto-textarea-wrapper
     position relative
     width 100%
