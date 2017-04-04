@@ -14,7 +14,7 @@ $ npm install autoTextarea --save
 ### package.json
 
 ```
-"auto-textarea": "^1.1.0"
+"auto-textarea": "^1.2.4"
 ```
 
 ### Use (如何引入)
