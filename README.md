@@ -14,7 +14,7 @@ $ npm install autoTextarea --save
 ### package.json
 
 ```
-"auto-textarea": "^1.2.4"
+"auto-textarea": "^1.3.0"
 ```
 
 ### Use (如何引入)
@@ -47,7 +47,19 @@ $ npm install autoTextarea --save
 
 ``` html
     // html
-    <autoTextarea placeholder="" lineHeight="30px" border="false" fontSize="18px" :value="" :change="function"/>
+    <autoTextarea placeholder="" lineHeight="30px" border="false" fontSize="18px" :value="" :onchange="function"/>
+```
+
+### 监听value
+
+``` html
+    <!-- 使用双向绑定修饰符 -->
+    <autoTextarea v-model="value"/>
+```
+
+``` html
+    <!-- 当value发生改变 , 出发onchange事件 参数为改变后的value -->
+    <autoTextarea :value="value" :onchange="function"/>
 ```
 
 ## API (props)
@@ -59,7 +71,7 @@ $ npm install autoTextarea --save
 | fontSize   | String      |   14px        | 输入框文字大小 |
 | placeholder | String     |               | 输入框默认文字 |
 | border     | Boolean     |   false       | 是否带有边框 |
-| change     | Function    |               | 监听内容变化 ， function(val) |
+| onchange   | Function    |               | 监听内容变化 ， function(val) |
 
 ## analyse (原理剖析)
 

@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}}</pre>
-    <textarea spellcheck="false" :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" @keyup="$keyup" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
@@ -11,7 +11,7 @@
         data() {
             return {
                 temp_value: (() => {
-                    return this.value
+                    return this.value;
                 })()
             };
         },
@@ -34,7 +34,7 @@
                 type: Boolean,
                 default: false
             },
-            change: {
+            onchange: {
                 type: Function,
                 default: null
             },
@@ -48,15 +48,16 @@
             }
         },
         methods: {
-            $keyup($event) {
-                if (this.change) {
-                    this.change(this.temp_value , $event)
-                }
-            }
         },
         watch: {
             value: function (val, oldVal) {
                 this.temp_value = val
+            },
+            temp_value: function (val, oldVal) {
+                if (this.onchange) {
+                    this.onchange(val)
+                }
+                this.$emit('input' , val)
             }
         }
     };
@@ -75,6 +76,7 @@
       padding 0
       font-size 100%
     .auto-textarea-input
+      font-family Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif
       position absolute
       width 100%
       height 100%
@@ -83,6 +85,7 @@
       margin 0
       padding 0
       overflow-y hidden
+      color #2C3E50
       &.no-border
         outline 0 none
         border none !important
