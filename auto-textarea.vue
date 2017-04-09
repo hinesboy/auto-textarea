@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}}</pre>
-    <textarea spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea @keyup="change" spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
@@ -48,15 +48,15 @@
             }
         },
         methods: {
+            change($event) {
+                this.onchange(this.temp_value , $event)
+            }
         },
         watch: {
             value: function (val, oldVal) {
                 this.temp_value = val
             },
             temp_value: function (val, oldVal) {
-                if (this.onchange) {
-                    this.onchange(val)
-                }
                 this.$emit('input' , val)
             }
         }

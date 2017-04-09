@@ -71,7 +71,7 @@ $ npm install autoTextarea --save
 | fontSize   | String      |   14px        | 输入框文字大小 |
 | placeholder | String     |               | 输入框默认文字 |
 | border     | Boolean     |   false       | 是否带有边框 |
-| onchange   | Function    |               | 监听内容变化 ， function(val) |
+| onchange   | Function    |               | 监听内容变化 ， function(val , $event) |
 
 ## analyse (原理剖析)
 
