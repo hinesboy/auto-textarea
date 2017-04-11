@@ -49,7 +49,9 @@
         },
         methods: {
             change($event) {
-                this.onchange(this.temp_value , $event)
+                if (this.onchange) {
+                    this.onchange(this.temp_value , $event)
+                }
             }
         },
         watch: {
