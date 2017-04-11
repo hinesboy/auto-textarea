@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}}</pre>
-    <textarea @keyup="change" spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea :autofocus="s_autofocus" @keyup="change" spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
@@ -12,12 +12,23 @@
             return {
                 temp_value: (() => {
                     return this.value;
+                })(),
+                s_autofocus: (() => {
+                    if (this.autofocus) {
+                        return 'autofocus'
+                    } else {
+                        null
+                    }
                 })()
             };
         },
         created() {
         },
         props: {
+            autofocus: {
+                type: Boolean,
+                default: false
+            },
             value: {
                 type: String,
                 default: ''

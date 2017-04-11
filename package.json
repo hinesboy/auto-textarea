@@ -1,6 +1,6 @@
 {
   "name": "auto-textarea",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "基于Vue的自适应高度的文本输入框",
   "main": "index.js",
   "scripts": {

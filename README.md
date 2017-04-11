@@ -14,7 +14,7 @@ $ npm install autoTextarea --save
 ### package.json
 
 ```
-"auto-textarea": "^1.3.3"
+"auto-textarea": "^1.3.4"
 ```
 
 ### Use (如何引入)
@@ -67,6 +67,7 @@ $ npm install autoTextarea --save
 | name 名称   | type 类型    |  default 默认值 | des 描述 |
 | -------- | :---------: | :------------: | ------- |
 | value      | String      |               | 初始值 |
+| autofocus  | Boolean     |       false   | 自动聚焦 |
 | lineHeight | String      |   18px        | 输入框的行高 |
 | fontSize   | String      |   14px        | 输入框文字大小 |
 | placeholder | String     |               | 输入框默认文字 |
