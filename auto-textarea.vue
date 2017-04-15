@@ -84,7 +84,9 @@
     line-height normal
     .auto-textarea-block
       display block
+      word-break break-all
       visibility hidden
+      overflow hidden
       margin 0
       padding 0
       font-size 100%
