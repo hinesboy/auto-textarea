@@ -8,7 +8,7 @@
 ### Install auto-textarea (安装)
 
 ```
-$ npm install autoTextarea --save
+$ npm install auto-textarea --save
 ```
 
 ### package.json
