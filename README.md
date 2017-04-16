@@ -58,7 +58,7 @@ $ npm install auto-textarea --save
 ```
 
 ``` html
-    <!-- 当value发生改变 , 出发onchange事件 参数为改变后的value -->
+    <!-- 当value发生改变 , 触发onchange事件 参数为改变后的value -->
     <autoTextarea :value="value" :onchange="function"/>
 ```
 
