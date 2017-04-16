@@ -23,7 +23,7 @@ $ npm install auto-textarea --save
     // 方法一
     // import with ES6
     import Vue from 'vue'
-    import autoTextarea from 'autoTextarea'
+    import autoTextarea from 'auto-textarea'
 
     // require with Webpack/Node.js
     var Vue = require('vue')
@@ -36,7 +36,7 @@ $ npm install auto-textarea --save
 ```
     // 方法二
     // or use with component(ES6)
-    import { autoTextarea } from 'autoTextarea'
+    import { autoTextarea } from 'auto-textarea'
 
     export default {
       components: {
