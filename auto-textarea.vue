@@ -84,11 +84,13 @@
     line-height normal
     .auto-textarea-block
       display block
-      word-break break-all
+      white-space pre-wrap
+      word-wrap break-word !important
       visibility hidden
       overflow hidden
       margin 0
       padding 0
+      box-sizing border-box
       font-size 100%
     .auto-textarea-input
       font-family Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif
