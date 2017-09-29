@@ -1,7 +1,7 @@
 <template>
   <div :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-wrapper">
     <pre :style="{fontSize: fontSize , lineHeight: lineHeight}" class="auto-textarea-block"><br/>{{temp_value}} </pre>
-    <textarea :autofocus="s_autofocus" @keyup="change" spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
+    <textarea ref="vTextarea" :autofocus="s_autofocus" @keyup="change" spellcheck="false"  :placeholder="placeholder" v-model="temp_value"  :style="{fontSize: fontSize , lineHeight: lineHeight}" :class="{'no-border': !border , 'no-resize': !resize}" class="auto-textarea-input">
       </textarea>
   </div>
 </template>
