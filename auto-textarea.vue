@@ -107,6 +107,10 @@
       padding 0
       overflow-y hidden
       color #2C3E50
+      tab-size 4
+      -moz-tab-size 4
+      -o-tab-size 4
+      -webkit-tab-size 4
       &.no-border
         outline 0 none
         border none !important
